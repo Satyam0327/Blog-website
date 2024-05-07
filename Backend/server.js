@@ -17,7 +17,9 @@ const app = express() ;
 
 app.use(express.json())
 app.use(cors())
-
+app.use(cors({
+    origin: 'https://blog-website-frontend-satyam-singhs-projects-dc2c2fa3.vercel.app/'
+  }));
 app.use("/",IndexRoute)
 
 app.use(customErrorHandler)
